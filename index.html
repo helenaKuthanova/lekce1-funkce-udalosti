@@ -11,10 +11,13 @@
 	<h1>Funkce a události</h1>
 
 	<div class="ctverecek">Čtvereček</div>
+    <button onclick="zmenBarvuNaZelenou('.ctverecek')">Zezelenej!</button>
+    <button onclick="zmenBarvuNaZlutou('.ctverecek')">Zežloutni!</button>
 
 	<pre>Tady bude výsledek: <span id="vysledek"></span></pre>
+    <button onclick="zobrazVysledek(47, 8)">Sečti!</button>
 
-	<button onclick="upozorni()">
+	<button onclick="upozorni('.ctverecek')">
 		Moje tlačítko
 	</button>
 
@@ -22,11 +25,13 @@
 		<h2>Zadání domácího úkolu</h2>
 
 		<ul>
-			<li>Vytvořte tlačítko, při jehož stisknutí se změní barva <strong>Čtvereček</strong> na zelenou.</li>
+			<li id="pokusnyRadek">Vytvořte tlačítko, při jehož stisknutí se změní barva <strong>Čtvereček</strong> na zelenou.</li>
 			<li>Upravte kód tak, aby se výsledek funkce <em>secti()</em> zobrazil v prvku s ID <strong>vysledek</strong> až po stiknutí nově přidaného tlačítka "Zobraz výsledek".</li>
 			<li>Uprav funkci <em>upozorni()</em> tak, aby se navíc vypisoval text i do konzole a také nahradil text v elementu <strong>Čtvereček</strong>.</li>
 		</ul>
 	</div>
+
+    <button ondblclick="spustiPokusnyRadek('#pokusnyRadek')">Pokusňák na dvojklik</button>
 	
 	<script type="text/javascript" src="main.js"></script>
 </body>
